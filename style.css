@@ -1,0 +1,116 @@
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-accent: #151515;
+    --gold: #c3a343;
+    --text-main: #e1e1e1;
+    --text-dim: #888;
+    --border: rgba(195, 163, 67, 0.3);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header & Typography */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(circle, #1a1a1a 0%, #0a0a0a 100%);
+    border-bottom: 1px solid var(--border);
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.glimmer-text {
+    text-shadow: 0 0 15px rgba(195, 163, 67, 0.4);
+}
+
+.subtitle {
+    color: var(--gold);
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gold);
+    margin: 10px;
+}
+
+.primary { background: var(--gold); color: black; }
+.primary:hover { background: transparent; color: var(--gold); }
+
+.secondary { color: var(--gold); }
+.secondary:hover { background: rgba(195, 163, 67, 0.1); }
+
+/* Placeholders */
+.placeholder {
+    background: var(--bg-accent);
+    border: 1px solid var(--border);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+}
+
+.placeholder::after {
+    content: attr(data-label);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.image-full { width: 100%; height: 400px; }
+.image-square { width: 100%; aspect-ratio: 1 / 1; }
+
+/* Grid & Content */
+.feature-block {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.card h3 {
+    color: var(--gold);
+    border-left: 3px solid var(--gold);
+    padding-left: 10px;
+    letter-spacing: 1px;
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 1px;
+}
